@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:product_listing_app/core/utils/app_strings.dart';
 
 class ProductInfo extends StatelessWidget {
   final String title;
@@ -33,7 +34,7 @@ class ProductInfo extends StatelessWidget {
         ),
         const SizedBox(height: 16),
         Text(
-          'Category',
+          AppStrings.category,
           style: Theme.of(context).textTheme.titleMedium?.copyWith(
                 fontWeight: FontWeight.bold,
               ),
@@ -44,7 +45,7 @@ class ProductInfo extends StatelessWidget {
         ),
         const SizedBox(height: 16),
         Text(
-          'Description',
+          AppStrings.description,
           style: Theme.of(context).textTheme.titleMedium?.copyWith(
                 fontWeight: FontWeight.bold,
               ),
@@ -57,4 +58,4 @@ class ProductInfo extends StatelessWidget {
       ],
     );
   }
-} 
+}

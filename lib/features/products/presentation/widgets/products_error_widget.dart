@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:product_listing_app/core/utils/app_strings.dart';
 
 class ProductsErrorWidget extends StatelessWidget {
   const ProductsErrorWidget({
@@ -21,7 +22,7 @@ class ProductsErrorWidget extends StatelessWidget {
           const SizedBox(height: 16),
           ElevatedButton(
             onPressed: onPressed,
-            child: const Text('Try Again'),
+            child: const Text(AppStrings.tryAgain),
           ),
         ],
       ),
