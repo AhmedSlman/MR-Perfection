@@ -7,7 +7,7 @@ import 'product_state.dart';
 class ProductBloc extends Bloc<ProductEvent, ProductState> {
   final GetProducts getProducts;
 
-  ProductBloc({required this.getProducts}) : super(ProductInitial()) {
+  ProductBloc({required this.getProducts}) : super(const ProductInitial()) {
     on<GetProductsEvent>(_onGetProducts);
     on<SearchProducts>(_onSearchProducts);
   }
@@ -16,7 +16,7 @@ class ProductBloc extends Bloc<ProductEvent, ProductState> {
     GetProductsEvent event,
     Emitter<ProductState> emit,
   ) async {
-    emit(ProductLoading());
+    emit(const ProductLoading());
     final result = await getProducts(NoParams());
     result.fold(
       (failure) => emit(const ProductError(message: 'Failed to load products')),
